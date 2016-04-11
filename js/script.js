@@ -1,3 +1,4 @@
+
 'use strict';
 var MyApp = {};
 var $thingList = $('#fav-list');
@@ -19,7 +20,7 @@ $thingList.on('blur','input',function() {
 MyApp.addToList = function(list) {
   var $newList = $('<li class="fav-thing"><span>');
   var $newItemText = $('#new-thing');
-  $newList.html($newItemText.val());
+  $newList.find('span').html($newItemText.val());
   $newItemText.val('');
   if ($newList.html() !== '') {
     list.append($newList);
@@ -42,7 +43,6 @@ MyApp.addButtons = function($item) {
 }
 
 $(function() {
-
   var $button = $('#new-thing-button');
 
   $button.on('click', function(e) {
