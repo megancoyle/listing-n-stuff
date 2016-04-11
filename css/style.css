@@ -1,0 +1,7 @@
+.inactive {
+	color: #ccc;
+}
+
+.completed {
+  text-decoration: line-through;
+}
